@@ -7,8 +7,7 @@ This project was built by me using HTM, CSS and JavaScript. It was built for my 
 [Live Deployment]()
 
 
-![twitter_clone_update]()
-
+![sonography-app](https://user-images.githubusercontent.com/78431899/232914785-a7c6c59f-329e-477f-a8ec-8c3327ce5418.png)
 
 
 ## Technologies Used
