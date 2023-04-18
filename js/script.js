@@ -103,7 +103,7 @@ const Question = () => {
   // Reset questions state
   resetQuestionState();
 
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let questionNum = questionIdx + 1;
   
   questionText.innerHTML = `${questionNum}. ${ currentQuestion.question}`;
@@ -114,7 +114,7 @@ const Question = () => {
 
 // Multiple Choice: WORKS
 const handleMultipleChoice = () => {
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let currentOptions = currentQuestion.options;
   let type = currentQuestion.type;
 
@@ -137,7 +137,7 @@ const handleMultipleChoice = () => {
   }
 }
 const checkMultipleChoiceAnswer = (e) => {
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   const selectedChoice = e.target;
   const isCorrect = selectedChoice.dataset.isCorrect === 'true';
 
@@ -165,7 +165,7 @@ const checkMultipleChoiceAnswer = (e) => {
 // True or False
 const handleTrueFalse = () => {
   
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let currentOptions = currentQuestion.options
   let type = currentQuestion.type;
 
@@ -189,26 +189,27 @@ const handleTrueFalse = () => {
   }
 }
 const checkTrueFalseAnswer = (e) => {
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let type = currentQuestion.type;
   const selectedChoice = e.target;
   const isCorrect = selectedChoice.dataset.isCorrect === 'true';
   const explanationDisplay = document.getElementById('explanation')
   const explanation = currentQuestion.explanation;
 
-  explanationDisplay.innerHTML = `<em>Explanation:</em> <br>   "${explanation}"`
-  console.log(explanation)
-
   
-    if (isCorrect) {
-      selectedChoice.classList.add('correct');
-      currentQuestion['score'] = 1;
-      score++;
-      console.log(currentQuestion.score)
-    } else {
-      selectedChoice.classList.add('incorrect');
-    }
-    choices.appendChild(explanationDisplay);
+  
+  
+  if (isCorrect) {
+    selectedChoice.classList.add('correct');
+    currentQuestion['score'] = 1;
+    score++;
+    console.log(currentQuestion.score)
+  } else {
+    selectedChoice.classList.add('incorrect');
+    explanationDisplay.innerHTML = `<em>Explanation:</em> <br> "${explanation}"`;
+  }
+    // choices.appendChild(explanationDisplay);
+    console.log(explanation)
   
 
   Array.from(choices.children).forEach(trueFalseBtn => {
@@ -222,11 +223,14 @@ const checkTrueFalseAnswer = (e) => {
   });
   buttonsContainer.style.display = 'flex';
   console.log('check true or false')
+  nextBtn.addEventListener('click', () =>{
+    explanationDisplay.innerHTML = '';
+  });
 }
 
 // Fill In
 const handleFillIn = () => {
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let currentOptions = currentQuestion.options;
   let type = currentQuestion.type;
 
@@ -282,7 +286,7 @@ const checkFillInAnswer = (e) => {
   const currentInput = document.getElementById('fillIn');
 
   let currentAnswer = currentInput.value;
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let currentOptions = currentQuestion.options;
   
   console.log(currentAnswer.toLowerCase(), currentQuestion.options)
@@ -338,7 +342,7 @@ const checkFillInAnswer = (e) => {
 
 // Handle Answer Type
 const handleAnswerType = () => {
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let type = currentQuestion.type;
 
   switch (type) {
@@ -363,7 +367,7 @@ const Score = () => {
   scoreDiv.style.display = 'block';
   buttonsContainer.style.display = 'flex';
 
-  let currentQuestion = questions[questionIdx];
+  let currentQuestion = questions[randomNum];
   let message;
   // TotalScore
   let total = Math.floor((score / totalQuestions) * 100);
@@ -413,15 +417,16 @@ const Score = () => {
 // Next Question: WORKS
 const nextQ = () => {
   questionIdx++;
+  randomNum++;
   
-  if (questionIdx < totalQuestions) {
-    //   let previousQuestion = questions[questionIdx];
-    //   console.log('question:', questionIdx)
+  if (randomNum < totalQuestions) {
+    //   let previousQuestion = questions[randomNum];
+    //   console.log('question:', randomNum)
     Question();
 
     //   console.log('previousQ:', previousQuestion);
-    //   let currentQuestion = questions[questionIdx];
-    //   let nextQuestion = questions[questionIdx + 1];
+    //   let currentQuestion = questions[randomNum];
+    //   let nextQuestion = questions[randomNum + 1];
 
     //   console.log('currentQ:', currentQuestion);
     //   console.log('nextQ:', nextQuestion);
@@ -436,15 +441,16 @@ const nextQ = () => {
 // Prev Question: WORKS
 const prevQ = () => {
   questionIdx--;
+  randomNum--;
   
-  if (questionIdx >= 0) {
-    //   let previousQuestion = questions[questionIdx];
-    //   console.log('question:', questionIdx);
+  if (randomNum >= 0) {
+    //   let previousQuestion = questions[randomNum];
+    //   console.log('question:', randomNum);
     Question();
 
     //   console.log('previousQ:', previousQuestion);
-    //   let currentQuestion = questions[questionIdx];
-    //   let nextQuestion = questions[questionIdx - 1];
+    //   let currentQuestion = questions[randomNum];
+    //   let nextQuestion = questions[randomNum - 1];
   
     //   console.log('currentQ:', currentQuestion);
     //   console.log('nextQ:', nextQuestion);
