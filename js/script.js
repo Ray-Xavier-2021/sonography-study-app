@@ -190,6 +190,7 @@ const handleTrueFalse = () => {
 }
 const checkTrueFalseAnswer = (e) => {
   let currentQuestion = questions[questionIdx];
+  let type = currentQuestion.type;
   const selectedChoice = e.target;
   const isCorrect = selectedChoice.dataset.isCorrect === 'true';
   const explanationDisplay = document.getElementById('explanation')
@@ -198,15 +199,17 @@ const checkTrueFalseAnswer = (e) => {
   explanationDisplay.innerHTML = `<em>Explanation:</em> <br>   "${explanation}"`
   console.log(explanation)
 
-  if (isCorrect) {
-    selectedChoice.classList.add('correct');
-    currentQuestion['score'] = 1;
-    score++;
-    console.log(currentQuestion.score)
-  } else {
-    selectedChoice.classList.add('incorrect');
+  
+    if (isCorrect) {
+      selectedChoice.classList.add('correct');
+      currentQuestion['score'] = 1;
+      score++;
+      console.log(currentQuestion.score)
+    } else {
+      selectedChoice.classList.add('incorrect');
+    }
     choices.appendChild(explanationDisplay);
-  }
+  
 
   Array.from(choices.children).forEach(trueFalseBtn => {
     console.log('tf:', trueFalseBtn.dataset)
