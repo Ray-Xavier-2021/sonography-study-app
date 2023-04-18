@@ -1,4 +1,4 @@
-# # Twitter Clone
+# Sonography Quiz App
 
 
 This project was built by me using HTM, CSS and JavaScript. It was built for my niece to study while in school.
