@@ -383,162 +383,162 @@ const questions  = [
       {text: 'intravenous antibiotic therapy', isCorrect: true},
       {text: 'percutaneous drainage', isCorrect: true}
     ]
-  },
-  {
-    number: 32,
-    type: 'fill-in',
-    question: 'Can pyonephrosis be ressolved on its own?',
-    answer: 'No',
-    score: 0,
-    options: [
-      {text: 'No', isCorrect: true}
-    ]
-  },
-  {
-    number: 33,
-    type: 'true-false',
-    question: 'Papillary necrosis is ischemia of the medullary pyramids',
-    answer: 'True',
-    explanation: 'Renal papillary necrosis (RPN) is not a pathologic entity, but rather a descriptive term for a condition—necrosis of the papillae. The renal papillae (the apex of the renal pyramid that projects into the minor calyx) are vulnerable to ischemic necrosis. Ischemia is believed to have an important role in necrosis.',
-    score: 0,
-    options: [
-      {text: 'True', isCorrect: true},
-      {text: 'False', isCorrect: false}
-    ]
-  },
-  {
-    number: 34,
-    type: 'multiple-choice',
-    question: 'Describe what an Sonographer would see imaging renal sinus lipomatosis',
-    answer: ['Increase in central sinus', 'Echogenic complex with cortical thinning'],
-    score: 0,
-    options: [
-      {text: 'Increase in central sinus', isCorrect: false},
-      {text: 'Echogenic complex with cortical thinning', isCorrect: false},
-      {text: 'Parenchymal atrophy', isCorrect: false},
-      {text: 'All of the above', isCorrect: true}
+  }
+  // {
+  //   number: 32,
+  //   type: 'fill-in',
+  //   question: 'Can pyonephrosis be ressolved on its own?',
+  //   answer: 'No',
+  //   score: 0,
+  //   options: [
+  //     {text: 'No', isCorrect: true}
+  //   ]
+  // },
+  // {
+  //   number: 33,
+  //   type: 'true-false',
+  //   question: 'Papillary necrosis is ischemia of the medullary pyramids',
+  //   answer: 'True',
+  //   explanation: 'Renal papillary necrosis (RPN) is not a pathologic entity, but rather a descriptive term for a condition—necrosis of the papillae. The renal papillae (the apex of the renal pyramid that projects into the minor calyx) are vulnerable to ischemic necrosis. Ischemia is believed to have an important role in necrosis.',
+  //   score: 0,
+  //   options: [
+  //     {text: 'True', isCorrect: true},
+  //     {text: 'False', isCorrect: false}
+  //   ]
+  // },
+  // {
+  //   number: 34,
+  //   type: 'multiple-choice',
+  //   question: 'Describe what an Sonographer would see imaging renal sinus lipomatosis',
+  //   answer: ['Increase in central sinus', 'Echogenic complex with cortical thinning'],
+  //   score: 0,
+  //   options: [
+  //     {text: 'Increase in central sinus', isCorrect: false},
+  //     {text: 'Echogenic complex with cortical thinning', isCorrect: false},
+  //     {text: 'Parenchymal atrophy', isCorrect: false},
+  //     {text: 'All of the above', isCorrect: true}
       
-    ]
-  }
-  {
-    number: 35,
-    type: 'multiple-choice',
-    question: 'Regulatory functions of the kidney are decreased in both',
-    answer:[],
-    score: 0,
-    options: [
-      'Glomerulus function and acute renal failure',
-      'Acute and chronic renal failure',
-      'Loop of Henle function and chronic renal failure',
-      'None of the above'
-    ]
-  },
-  {
-    number: ,
-    type: 'fill-in',
-    question: 'Name 2 etiologic (cause) of chronic renal failure',
-    answer:[],
-    score: 0,
-    options: [
-      'parenchymal disease',
-      'nephropathies'          
-    ]
-  },
-  {
-    number: ,
-    type: 'true-false',
-    question: 'In acute renal failure (ARF) there is a reduction in glomerular filtration rate resulting in protoemia',
-    answer:[],
-    explanation: 'ARF may occur in prerenal, renal, or postrenal failure stages. The prerenal stage is secondary to hypoperfusion of the kidney. The renal stages may be caused by parenchymal diseases (i.e., acute glomerulonephritis, acute interstitial nephritis, or acute tubular necrosis). They may also be caused by renal vein thrombosis or renal artery occlusion',
-    score: 0,
-    options: [
-      'True',
-      'False'
-    ]
-  },
-  {
-    number: ,
-    type: 'fill-in',
-    question: 'In intrinsic "intrarenal" failure, ... is most common',
-    answer:[],
-    score: 0,
-    options: [
-      'acute tubular necrosis'
-    ]
-  },
-  {
-    number: ,
-    type: 'multiple-choice',
-    question: "What is Ultrasound's role in diagnosing the cause of acute renal failure?",
-    answer:[],
-    score: 0,
-    options: [
-      'hydronephrosis',
-      'abnormal resistance index'
-    ]
-  },
-  {
-    number: ,
-    type: 'fill-in',
-    question: 'High levels of Serum ... are the most accurate in diagnosing ARF',
-    answer:[],
-    score: 0,
-    options: [
-      'creatine'
-    ]
-  },
-  {
-    number: ,
-    type: 'fill-in',
-    question: 'What RAR',
-    answer:[],
-    score: 0,
-    options: [
-      'renal aortic ratio'
-    ]
-  },
-  {
-    number: ,
-    type: 'multiple-choice',
-    question: 'RAR ration should be no more than',
-    answer:[],
-    score: 0,
-    options: [
-      '<3.5',
-      '<2.5',
-      '<5.5',
-      '<6.5',
-      'None of the above'
-    ]
-  },
-  {
-    number: ,
-    type: 'multiple-choice',
-    question: 'When taking the indirect measurement of the stenosis what arteries should be used for cooler Doppler and weaveform?',
-    answer:[],
-    score: 0,
-    options: [
-      'Segemental or interlobar',
-      'Segemental or interlobular',
-      'Interlobar and arcuate',
-      'Aorta and interlobar',
-      'None of the above'
-    ]
-  },
-  {
-    number: 43,
-    type: 'multiple-choice',
-    question: 'The resistive index for this measurement should be no more than',
-    answer:[],
-    score: 0,
-    options: [
-      '0.5',
-      '0.7',
-      '0.4',
-      '0.6',
-      'None of the above'
-    ]
-  }
+  //   ]
+  // },
+  // {
+  //   number: 35,
+  //   type: 'multiple-choice',
+  //   question: 'Regulatory functions of the kidney are decreased in both',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'Glomerulus function and acute renal failure',
+  //     'Acute and chronic renal failure',
+  //     'Loop of Henle function and chronic renal failure',
+  //     'None of the above'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'fill-in',
+  //   question: 'Name 2 etiologic (cause) of chronic renal failure',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'parenchymal disease',
+  //     'nephropathies'          
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'true-false',
+  //   question: 'In acute renal failure (ARF) there is a reduction in glomerular filtration rate resulting in protoemia',
+  //   answer:[],
+  //   explanation: 'ARF may occur in prerenal, renal, or postrenal failure stages. The prerenal stage is secondary to hypoperfusion of the kidney. The renal stages may be caused by parenchymal diseases (i.e., acute glomerulonephritis, acute interstitial nephritis, or acute tubular necrosis). They may also be caused by renal vein thrombosis or renal artery occlusion',
+  //   score: 0,
+  //   options: [
+  //     'True',
+  //     'False'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'fill-in',
+  //   question: 'In intrinsic "intrarenal" failure, ... is most common',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'acute tubular necrosis'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'multiple-choice',
+  //   question: "What is Ultrasound's role in diagnosing the cause of acute renal failure?",
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'hydronephrosis',
+  //     'abnormal resistance index'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'fill-in',
+  //   question: 'High levels of Serum ... are the most accurate in diagnosing ARF',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'creatine'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'fill-in',
+  //   question: 'What RAR',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'renal aortic ratio'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'multiple-choice',
+  //   question: 'RAR ration should be no more than',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     '<3.5',
+  //     '<2.5',
+  //     '<5.5',
+  //     '<6.5',
+  //     'None of the above'
+  //   ]
+  // },
+  // {
+  //   number: ,
+  //   type: 'multiple-choice',
+  //   question: 'When taking the indirect measurement of the stenosis what arteries should be used for cooler Doppler and weaveform?',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     'Segemental or interlobar',
+  //     'Segemental or interlobular',
+  //     'Interlobar and arcuate',
+  //     'Aorta and interlobar',
+  //     'None of the above'
+  //   ]
+  // },
+  // {
+  //   number: 43,
+  //   type: 'multiple-choice',
+  //   question: 'The resistive index for this measurement should be no more than',
+  //   answer:[],
+  //   score: 0,
+  //   options: [
+  //     '0.5',
+  //     '0.7',
+  //     '0.4',
+  //     '0.6',
+  //     'None of the above'
+  //   ]
+  // }
 ]
 
 // Export for use in other file
