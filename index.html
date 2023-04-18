@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sonography Quiz App</title>
+</head>
+
+<body>
+  <main class="container">
+    <section id="quiz">
+      <h1 class="title">Quiz</h1>
+
+      <div id="score">
+        <p class="score-text">Score</p>
+
+        <span id="user-score"></span>        
+        <span>/</span>        
+        <span id="total-questions"></span>
+        <span id="total-score"></span>
+
+      </div>
+
+
+      
+      <h2 class="subject"></h2>
+
+      <div id="questions">
+        <p id="question-text"></p>
+
+        <span id="explanation"></span>
+
+        <div id="choices">
+        </div>
+
+      </div>
+
+      <div id="buttons-container">
+        <button onclick="handleBtnClick()" id="prevBtn" class="prev">Prev</button>
+        <button onclick="handleBtnClick()" id="submitBtn" type="submit" class="submit"></button>
+        <button onclick="handleBtnClick()" id="nextBtn" class="next">Next</button>
+      </div>
+
+    </section>
+  </main>
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

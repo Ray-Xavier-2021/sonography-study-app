@@ -1,0 +1,245 @@
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+/* features */
+.selected {
+  background-color: #001e4d;
+  color: #fff;
+}
+
+.unselected {
+  background-color: #fff;
+  color: #000;
+}
+
+/* APP */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Excellent code :) */
+#quiz {
+  border-radius: 8px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+  max-width: 540px;
+  padding: 20px;
+  /* width: 540px; */
+  /* height: 500px; */
+}
+
+.title,
+.review-title {
+  font-size: 48px;
+  text-align: center;
+}
+
+#score {
+  width: 6 0px;
+  text-align: center;
+  margin: 4px;
+}
+
+.score-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#user-score {
+  color: #EF9614;
+  font-size: 20px;
+}
+
+#total-questions {
+  font-size: 20px;
+  color: #6b5650;
+}
+
+.passed {
+  font-size: 24px;
+  color: #11bc11;
+}
+
+.failed {
+  color: #de0000;
+  font-size: 22px;
+}
+
+/* Questions Section */
+#questions,
+#review-questions {
+  font-size: 20px;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.subject {
+  border-bottom:  1px solid #333;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+#question-text,
+#explanation {
+  padding: 5px 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+#explanation {
+  font-size: 16px;
+}
+
+/* Choices / Options / Answers */
+#choices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  padding: 4px;
+  width: 100%;
+}
+
+
+/* Borrowed code */
+.answerBtn {
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 4px 0;
+  text-align: left;
+  align-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.answerBtn:hover:not((disabled)) {
+  background: #222;
+  color: #fff;
+}
+
+.answerBtn:disabled {
+  cursor: no-drop;
+}
+
+.correct {
+  background-color: #9aeabc;
+}
+
+.incorrect {
+  background-color: #ff9393;
+}
+
+/*  */
+
+.choiceDiv,
+.trueFalseChoiceDiv,
+#fillInDiv,
+#multiFillInDiv  {
+  align-items: center;
+  width: 100%;
+  margin: 4px auto;
+}
+
+#fillInDiv {
+  display: flex;
+  padding: 2px;
+}
+.choiceDiv,
+.trueFalseChoiceDiv {
+  cursor: pointer;
+  padding-left: 4px;
+}
+
+.selection { 
+  display: inline-block;
+  font-size: 16px;
+}
+
+label {
+  flex-grow: 1;
+}
+
+#fillIn {
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  width: 95%;
+  height: 30px;
+  margin-right: 2px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Navigation Buttons */
+#buttons-container {
+  /* display: flex; */
+  justify-content: space-evenly;
+  margin: 5px auto;
+  padding: 5px;
+  width: 100%;
+}
+
+.prev,
+.submit,
+.next {
+  background-color: #001e4d;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  /* display: none; */
+  font-weight: 500;
+  width: 150px;
+  padding: 10px;
+  margin: auto 5px;
+}
+
+/* Fill in */
+#fillInSave{
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
+  width: 60px;
+  left: 328px;
+  padding: 0 2px;
+  font-size: 18px;
+}
+
+
+.saved {
+  background-color: green;
+  color: white;
+}
+
+.unsaved {
+  background-color: red;
+  color: white;
+}
+
