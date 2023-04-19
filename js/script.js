@@ -23,12 +23,10 @@ const totalQuestions = questions.length;
 let questionIdx = 0;
 let count;
 
-// Score
-let score = 0;
 
 // Random question
 let randomNum = Math.floor(Math.random() * totalQuestions);
-let randomQuestion = questions[randomNum].question;
+let randomQuestion = questions[questionIdx].question;
 
 
 // Calculate Score
@@ -41,10 +39,8 @@ const submitBtn = document.getElementById('submitBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 // Score - Total Question(s)
-const scoreDiv = document.getElementById('score');
-const userScore = document.getElementById('user-score');
-const totalScore = document.getElementById('total-score');
-const totalQuestionsCount = document.getElementById('total-questions');
+const scoreContainer = document.getElementById('score');
+let score = 0;
 
 // True or False explanation 
 const explanationDisplay = document.getElementById('explanation');
@@ -55,7 +51,7 @@ const load = () => {
 
   Title();
   buttonsContainer.style.display = 'flex';
-  scoreDiv.style.display = 'none';
+  scoreContainer.style.display = 'none';
   submitBtn.innerHTML = 'Start Quiz!';
   prevBtn.style.display = 'none';
   nextBtn.style.display = 'none';
@@ -68,7 +64,7 @@ const startQuiz = () => {
   questionIdx = 0;
   score = 0;
   
-  scoreDiv.style.display = 'none';
+  scoreContainer.style.display = 'none';
   questionsDiv.style.display = 'block';
   prevBtn.style.display = 'block';
   nextBtn.style.display = 'block';
@@ -107,10 +103,11 @@ const Question = () => {
   // Reset questions state
   resetQuestionState();
 
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let questionNum = questionIdx + 1;
   
   questionText.innerHTML = `${questionNum}. ${ currentQuestion.question}`;
+  explanationDisplay.style.display = 'none';
 
   // Handle type of question
   handleAnswerType();
@@ -118,7 +115,7 @@ const Question = () => {
 
 // Multiple Choice: WORKS
 const handleMultipleChoice = () => {
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let currentOptions = currentQuestion.options;
   let type = currentQuestion.type;
 
@@ -141,7 +138,7 @@ const handleMultipleChoice = () => {
   }
 }
 const checkMultipleChoiceAnswer = (e) => {
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   const selectedChoice = e.target;
   const isCorrect = selectedChoice.dataset.isCorrect === 'true';
 
@@ -169,7 +166,7 @@ const checkMultipleChoiceAnswer = (e) => {
 // True or False
 const handleTrueFalse = () => {
   
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let currentOptions = currentQuestion.options
   let type = currentQuestion.type;
 
@@ -193,7 +190,7 @@ const handleTrueFalse = () => {
   }
 }
 const checkTrueFalseAnswer = (e) => {
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let type = currentQuestion.type;
   const selectedChoice = e.target;
   const isCorrect = selectedChoice.dataset.isCorrect === 'true';
@@ -233,7 +230,7 @@ const checkTrueFalseAnswer = (e) => {
 
 // Fill In
 const handleFillIn = () => {
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let currentOptions = currentQuestion.options;
   let type = currentQuestion.type;
 
@@ -289,7 +286,7 @@ const checkFillInAnswer = (e) => {
   const currentInput = document.getElementById('fillIn');
 
   let currentAnswer = currentInput.value;
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let currentOptions = currentQuestion.options;
   
   console.log(currentAnswer.toLowerCase(), currentQuestion.options)
@@ -345,7 +342,7 @@ const checkFillInAnswer = (e) => {
 
 // Handle Answer Type
 const handleAnswerType = () => {
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let type = currentQuestion.type;
 
   switch (type) {
@@ -367,10 +364,14 @@ const handleAnswerType = () => {
 // Scoring
 const Score = () => {
   resetQuestionState();
-  scoreDiv.style.display = 'block';
+  const userScore = document.getElementById('user-score');
+  const totalScore = document.getElementById('total-score');
+  const totalQuestionsCount = document.getElementById('total-questions');
+
+  scoreContainer.style.display = 'block';
   buttonsContainer.style.display = 'flex';
 
-  let currentQuestion = questions[randomNum];
+  let currentQuestion = questions[questionIdx];
   let message;
   // TotalScore
   let total = Math.floor((score / totalQuestions) * 100);
@@ -422,14 +423,14 @@ const nextQ = () => {
   questionIdx++;
   randomNum++;
   
-  if (randomNum < totalQuestions) {
-    //   let previousQuestion = questions[randomNum];
+  if (questionIdx < totalQuestions) {
+    //   let previousQuestion = questions[questionIdx];
     //   console.log('question:', randomNum)
     Question();
 
     //   console.log('previousQ:', previousQuestion);
-    //   let currentQuestion = questions[randomNum];
-    //   let nextQuestion = questions[randomNum + 1];
+    //   let currentQuestion = questions[questionIdx];
+    //   let nextQuestion = questions[questionIdx + 1];
 
     //   console.log('currentQ:', currentQuestion);
     //   console.log('nextQ:', nextQuestion);
@@ -447,14 +448,14 @@ const prevQ = () => {
   questionIdx--;
   randomNum--;
   
-  if (randomNum >= 0) {
-    //   let previousQuestion = questions[randomNum];
+  if (questionIdx >= 0) {
+    //   let previousQuestion = questions[questionIdx];
     //   console.log('question:', randomNum);
     Question();
 
     //   console.log('previousQ:', previousQuestion);
-    //   let currentQuestion = questions[randomNum];
-    //   let nextQuestion = questions[randomNum - 1];
+    //   let currentQuestion = questions[questionIdx];
+    //   let nextQuestion = questions[questionIdx - 1];
   
     //   console.log('currentQ:', currentQuestion);
     //   console.log('nextQ:', nextQuestion);
