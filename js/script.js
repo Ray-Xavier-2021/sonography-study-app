@@ -11,7 +11,7 @@ const subject = document.querySelector('.subject');
 
 // Question(s)
 const questionsDiv = document.getElementById('questions');
-const questionText = document.getElementById('question-text');
+const questionText = document.getElementById('questionText');
 
 // Choices 
 const choices = document.getElementById('choices');
@@ -33,7 +33,7 @@ let randomQuestion = questions[questionIdx].question;
 // (score/totalQuestions) *100;
 
 // Buttons
-const buttonsContainer = document.getElementById('buttons-container');
+const buttonsContainer = document.getElementById('buttonsContainer');
 const prevBtn = document.getElementById('prevBtn');
 const submitBtn = document.getElementById('submitBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -363,23 +363,40 @@ const handleAnswerType = () => {
 
 // Scoring
 const Score = () => {
+  // Reset Questions
   resetQuestionState();
-  const userScore = document.getElementById('user-score');
-  const totalScore = document.getElementById('total-score');
-  const totalQuestionsCount = document.getElementById('total-questions');
-
-  scoreContainer.style.display = 'block';
-  buttonsContainer.style.display = 'flex';
-
-  let currentQuestion = questions[questionIdx];
-  let message;
+  
   // TotalScore
   let total = Math.floor((score / totalQuestions) * 100);
   let passed = total > 80;
-  
-  // Total question count
+
+  // Score Text
+  const scoreText = document.createElement('p');
+  scoreText.setAttribute('class', 'scoreText');
+  scoreText.innerHTML = 'Score';
+
+  // User score
+  const userScore = document.createElement('span');
+  userScore.setAttribute('id', 'userScore');
+  userScore.innerHTML = score;
+
+  // Slash
+  const slash = document.createElement('span');
+  slash.innerHTML = '/';
+
+  // Total score
+  const totalScore = document.createElement('totalScore');
+  totalScore.setAttribute('id', 'totalScore');
+  totalScore.innerHTML = `= ${total}%`;
+
+  // Total questions container
+  const totalQuestionsCount = document.createElement('span');
+  totalQuestionsCount.setAttribute('id', 'totalQuestions')
   totalQuestionsCount.innerHTML = totalQuestions;
 
+  // Message
+  let message;
+  
   questions.forEach(question => {
     if(question.score === 1) {
       console.log(`Question scored ${question.score} point`)
@@ -388,13 +405,14 @@ const Score = () => {
     }
   });
   
+  // Check if passed
   if (passed) {
     totalScore.setAttribute('class', 'passed');
   } else {
     totalScore.classList.add('failed');
   }
   
-
+  
   if(total === 100) {
     // Message
     message = `Congratulations! You scored ${total}%`;
@@ -408,14 +426,19 @@ const Score = () => {
     // Message
     message = `Sorry you did not score high enough, Let's try again!`;
   }
+  
 
+  // Scoring
+  scoreContainer.append(scoreText);
+  scoreContainer.append(userScore);
+  scoreContainer.append(slash);
+  scoreContainer.append(totalQuestionsCount);
+  scoreContainer.append(totalScore);
+  scoreContainer.style.display = 'block';
 
-  // User Score
-  userScore.innerHTML = score;
-  // Total Score
-  totalScore.innerHTML = `= ${total}%`;
   // Message
   subject.innerHTML = `${message}`;
+  buttonsContainer.style.display = 'flex';
 }
 
 // Next Question: WORKS
@@ -464,8 +487,6 @@ const prevQ = () => {
     alert(`This is the first question. Please continue.`);
   }
 
-  
-
   console.log('Clicked previous button');
 }
 
@@ -487,6 +508,8 @@ const restartQuiz = () => {
   if(questionIdx === totalQuestions - 1) {
     startQuiz();
   }
+
+  scoreContainer.innerHTML = '';
 
   console.log('Quiz restarted.')  
 }
