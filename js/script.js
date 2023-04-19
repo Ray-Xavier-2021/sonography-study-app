@@ -146,7 +146,6 @@ const checkMultipleChoiceAnswer = (e) => {
     selectedChoice.classList.add('correct');
     currentQuestion['score'] = 1;
     score++;
-    console.log(currentQuestion.score)
   } else {
     selectedChoice.classList.add('incorrect');
   }
@@ -160,7 +159,6 @@ const checkMultipleChoiceAnswer = (e) => {
     
   });
   buttonsContainer.style.display = 'flex';
-  console.log('check mc answer')
 }
 
 // True or False
@@ -204,18 +202,13 @@ const checkTrueFalseAnswer = (e) => {
     selectedChoice.classList.add('correct');
     currentQuestion['score'] = 1;
     score++;
-    console.log(currentQuestion.score)
   } else {
     selectedChoice.classList.add('incorrect');
     explanationDisplay.style.display = 'block';
-  }
-    // choices.appendChild(explanationDisplay);
-    console.log(explanation)
-    console.log(explanationDisplay.innerHTML)
-  
+  }  
 
   Array.from(choices.children).forEach(trueFalseBtn => {
-    console.log('tf:', trueFalseBtn.dataset)
+    
     if (trueFalseBtn.dataset.isCorrect === 'true') {
       trueFalseBtn.classList.add('correct');
     }
@@ -224,8 +217,6 @@ const checkTrueFalseAnswer = (e) => {
     
   });
   buttonsContainer.style.display = 'flex';
-
-  console.log('check true or false');
 }
 
 // Fill In
@@ -289,16 +280,12 @@ const checkFillInAnswer = (e) => {
   let currentQuestion = questions[questionIdx];
   let currentOptions = currentQuestion.options;
   
-  console.log(currentAnswer.toLowerCase(), currentQuestion.options)
-  
   const saveBtn = e.target;
   
   fillInItem.append(currentAnswer);
   answerOutput.classList.add('answerBtn');
   answerOutput.innerHTML = `>>> ${currentAnswer}`;
   choices.appendChild(answerOutput);
-
-  console.log(answerOutput);
   
   currentOptions.forEach(answer => {
     const correctOutput = document.createElement('button');
@@ -306,7 +293,6 @@ const checkFillInAnswer = (e) => {
     let isCorrect = currentAnswer.toLowerCase() === answer.text.toLowerCase() && answer.isCorrect === true;
     
     if (isCorrect) {
-      console.log('ca:', currentAnswer, answer, answer.text)
       correctAnswer = `>>> ${answer.text}`;
       answerOutput.style.display = 'none';
       score++;
@@ -328,16 +314,8 @@ const checkFillInAnswer = (e) => {
 
   // Disable save button
   saveBtn.disabled = true;
-  
-
-  // Array.from(choices.children).forEach(fillInBtn => {
-  //   console.log('fb:', fillInBtn)
-  // if (fillInBtn.dataset.isCorrect === 'true') {
-  //   fillInBtn.classList.add('correct');
-  // }});
 
   buttonsContainer.style.display = 'flex';
-  console.log('check fill in answer')
 }
 
 // Handle Answer Type
@@ -358,7 +336,6 @@ const handleAnswerType = () => {
     default:
       break;
   }
-
 }
 
 // Scoring
@@ -394,18 +371,19 @@ const Score = () => {
   totalQuestionsCount.setAttribute('id', 'totalQuestions')
   totalQuestionsCount.innerHTML = totalQuestions;
 
-  // Message
+
   let message;
   
-  questions.forEach(question => {
-    if(question.score === 1) {
-      console.log(`Question scored ${question.score} point`)
-    } else {
-      console.log('No score recorded yet.')
-    }
-  });
+  // Total question count
+
+  // questions.forEach(question => {
+  //   if(question.score === 1) {
+  //     console.log(`Question scored ${question.score} point`)
+  //   } else {
+  //     console.log('No score recorded yet.')
+  //   }
+  // });
   
-  // Check if passed
   if (passed) {
     totalScore.setAttribute('class', 'passed');
   } else {
@@ -463,7 +441,7 @@ const nextQ = () => {
   }
 
   explanationDisplay.style.display = 'none';
-  console.log('Clicked Next Button');
+  // console.log('Clicked Next Button');
 }
 
 // Prev Question: WORKS
@@ -487,7 +465,7 @@ const prevQ = () => {
     alert(`This is the first question. Please continue.`);
   }
 
-  console.log('Clicked previous button');
+  // console.log('Clicked previous button');
 }
 
 // Submit Quiz
@@ -511,7 +489,7 @@ const restartQuiz = () => {
 
   scoreContainer.innerHTML = '';
 
-  console.log('Quiz restarted.')  
+  console.log('Quiz restarted.'); 
 }
 
 // Handle buttons
@@ -523,10 +501,9 @@ const handleBtnClick = () => {
   submitBtn.onclick = function(e)  {
     
     if(e.target.innerHTML === 'Start Quiz!') {
-      console.log('Start Quiz!');
       startQuiz();
     } else if (e.target.innerHTML === 'Restart Quiz?') {
-      console.log('Re-start Quiz!');
+      console.log('Quiz Restarted!');
       restartQuiz();
     } else {
       submitQuiz();
