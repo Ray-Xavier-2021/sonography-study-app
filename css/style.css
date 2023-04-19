@@ -64,11 +64,13 @@ body {
 #userScore {
   color: #EF9614;
   font-size: 20px;
+  margin-right: 3px;
 }
 
 #totalQuestions {
   font-size: 20px;
   color: #6b5650;
+  margin: 3px;
 }
 
 .passed {
