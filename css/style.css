@@ -56,17 +56,17 @@ body {
   margin: 4px;
 }
 
-.score-text {
+.scoreText {
   font-size: 30px;
   font-weight: bold;
 }
 
-#user-score {
+#userScore {
   color: #EF9614;
   font-size: 20px;
 }
 
-#total-questions {
+#totalQuestions {
   font-size: 20px;
   color: #6b5650;
 }
@@ -97,7 +97,7 @@ body {
   text-align: center;
 }
 
-#question-text,
+#questionText,
 #explanation {
   padding: 5px 10px;
   text-align: left;
@@ -197,7 +197,7 @@ input[type="text"]:focus {
 }
 
 /* Navigation Buttons */
-#buttons-container {
+#buttonsContainer {
   /* display: flex; */
   justify-content: space-evenly;
   margin: 5px auto;
