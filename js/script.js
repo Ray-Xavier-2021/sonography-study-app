@@ -84,6 +84,7 @@ const Title = () => {
 // Reset Questions
 const resetQuestionState = () => {
   submitBtn.style.display = 'none';
+  prevBtn.style.display = 'none';
   buttonsContainer.style.display = 'none';
 
   while(choices.firstChild) {
@@ -440,7 +441,7 @@ const nextQ = () => {
     // alert(`This was the last question. Please submit quiz for scoring.`);
   }
 
-  explanationDisplay.style.display = 'none';
+  // explanationDisplay.style.display = 'none';
   // console.log('Clicked Next Button');
 }
 
