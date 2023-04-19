@@ -46,6 +46,10 @@ const userScore = document.getElementById('user-score');
 const totalScore = document.getElementById('total-score');
 const totalQuestionsCount = document.getElementById('total-questions');
 
+// True or False explanation 
+const explanationDisplay = document.getElementById('explanation');
+
+
 const load = () => {
   questionIdx = 0;
 
@@ -193,10 +197,10 @@ const checkTrueFalseAnswer = (e) => {
   let type = currentQuestion.type;
   const selectedChoice = e.target;
   const isCorrect = selectedChoice.dataset.isCorrect === 'true';
-  const explanationDisplay = document.getElementById('explanation')
   const explanation = currentQuestion.explanation;
 
-  
+  explanationDisplay.innerHTML = `<em>Explanation:</em> <br> "${explanation}"`;
+  // explanationDisplay.style.display = 'none';
   
   
   if (isCorrect) {
@@ -206,10 +210,11 @@ const checkTrueFalseAnswer = (e) => {
     console.log(currentQuestion.score)
   } else {
     selectedChoice.classList.add('incorrect');
-    explanationDisplay.innerHTML = `<em>Explanation:</em> <br> "${explanation}"`;
+    explanationDisplay.style.display = 'block';
   }
     // choices.appendChild(explanationDisplay);
     console.log(explanation)
+    console.log(explanationDisplay.innerHTML)
   
 
   Array.from(choices.children).forEach(trueFalseBtn => {
@@ -222,10 +227,8 @@ const checkTrueFalseAnswer = (e) => {
     
   });
   buttonsContainer.style.display = 'flex';
-  console.log('check true or false')
-  nextBtn.addEventListener('click', () =>{
-    explanationDisplay.innerHTML = '';
-  });
+
+  console.log('check true or false');
 }
 
 // Fill In
@@ -435,6 +438,7 @@ const nextQ = () => {
     // alert(`This was the last question. Please submit quiz for scoring.`);
   }
 
+  explanationDisplay.style.display = 'none';
   console.log('Clicked Next Button');
 }
 
@@ -458,6 +462,8 @@ const prevQ = () => {
   } else {
     alert(`This is the first question. Please continue.`);
   }
+
+  
 
   console.log('Clicked previous button');
 }
