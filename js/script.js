@@ -521,5 +521,3 @@ document.addEventListener('DOMContentLoaded', function () {
   // Handle button click
   handleBtnClick();
 });
-
-
