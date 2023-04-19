@@ -1,6 +1,7 @@
 const title = 'Kidney Pathology';
 
 const questions  = [
+
   {
     number: 1,
     type: 'multiple-choice',
@@ -119,7 +120,7 @@ const questions  = [
     type: 'true-false',
     question: 'The Uretero pelvic Junction is also called the Pelvic Ureteral Junction',
     answer: 'True',
-    explanation: "Not Found",
+    explanation: "Not Found.",
     score: 0,
     options: [
       {text: 'True', isCorrect: true},
@@ -229,7 +230,7 @@ const questions  = [
     type: 'true-false',
     question: 'Renal artery stenosis is the MOST common cause of uncontrollable hypertensive nephropathy',
     answer: 'False',
-    explanation: 'Renal artery stenosis (RAS) is the most common correctable cause of hypertension. Only 1% to 5% of hypertensive patients have a renovascular origin; most patients have essential hypertension.',
+    explanation: 'Renal artery stenosis (RAS) is the most common correctable cause of hypertension. Only 1% to 5% of hypertensive patients have a renovascular origin; most patients have essential hypertension.',
     score: 0,
     options: [
       {text: 'True', isCorrect: false},
@@ -251,7 +252,7 @@ const questions  = [
     type: 'true-false',
     question: 'To diagnose Pyelonephritis you must only do an ultrasound',
     answer: 'False',
-    explanation: 'The specific gravity is the measurement of the kidney’s ability to concentrate urine, it is especially low in cases of renal failure, glomerular nephritis, and pyelonephritis Power Doppler may also be used in detecting and better defining pyelonephritis, with the area of infection showing an absence or decreased flow.',
+    explanation: "The specific gravity is the measurement of the kidney’s ability to concentrate urine, it is especially low in cases of renal failure, glomerular nephritis, and pyelonephritis Power Doppler may also be used in detecting and better defining pyelonephritis, with the area of infection showing an absence or decreased flow",
     score: 0,
     options: [
       {text: 'True', isCorrect: false},
@@ -331,7 +332,6 @@ const questions  = [
     options: [
       {text: 'Kidney stone', isCorrect: true},
       {text: 'Nephrolithiasis', isCorrect: true}
-      
     ]
   },
   {
@@ -383,162 +383,477 @@ const questions  = [
       {text: 'intravenous antibiotic therapy', isCorrect: true},
       {text: 'percutaneous drainage', isCorrect: true}
     ]
-  }
-  // {
-  //   number: 32,
-  //   type: 'fill-in',
-  //   question: 'Can pyonephrosis be ressolved on its own?',
-  //   answer: 'No',
-  //   score: 0,
-  //   options: [
-  //     {text: 'No', isCorrect: true}
-  //   ]
-  // },
-  // {
-  //   number: 33,
-  //   type: 'true-false',
-  //   question: 'Papillary necrosis is ischemia of the medullary pyramids',
-  //   answer: 'True',
-  //   explanation: 'Renal papillary necrosis (RPN) is not a pathologic entity, but rather a descriptive term for a condition—necrosis of the papillae. The renal papillae (the apex of the renal pyramid that projects into the minor calyx) are vulnerable to ischemic necrosis. Ischemia is believed to have an important role in necrosis.',
-  //   score: 0,
-  //   options: [
-  //     {text: 'True', isCorrect: true},
-  //     {text: 'False', isCorrect: false}
-  //   ]
-  // },
-  // {
-  //   number: 34,
-  //   type: 'multiple-choice',
-  //   question: 'Describe what an Sonographer would see imaging renal sinus lipomatosis',
-  //   answer: ['Increase in central sinus', 'Echogenic complex with cortical thinning'],
-  //   score: 0,
-  //   options: [
-  //     {text: 'Increase in central sinus', isCorrect: false},
-  //     {text: 'Echogenic complex with cortical thinning', isCorrect: false},
-  //     {text: 'Parenchymal atrophy', isCorrect: false},
-  //     {text: 'All of the above', isCorrect: true}
+  },
+  {
+    number: 32,
+    type: 'fill-in',
+    question: 'Can pyonephrosis be resolved on its own?',
+    answer: 'No',
+    score: 0,
+    options: [
+      {text: 'No', isCorrect: true},
+      {text: 'Yes', isCorrect: false}
+    ]
+  },
+  {
+    number: 33,
+    type: 'true-false',
+    question: 'Papillary necrosis is ischemia of the medullary pyramids',
+    answer: 'True',
+    explanation: 'Renal papillary necrosis (RPN) is not a pathologic entity, but rather a descriptive term for a condition—necrosis of the papillae. The renal papillae (the apex of the renal pyramid that projects into the minor calyx) are vulnerable to ischemic necrosis. Ischemia is believed to have an important role in necrosis.',
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: true},
+      {text: 'False', isCorrect: false}
+    ]
+  },
+  {
+    number: 34,
+    type: 'multiple-choice',
+    question: 'Describe what an Sonographer would see imaging renal sinus lipomatosis',
+    answer: ['Increase in central sinus', 'Echogenic complex with cortical thinning'],
+    score: 0,
+    options: [
+      {text: 'Increase in central sinus', isCorrect: false},
+      {text: 'Echogenic complex with cortical thinning', isCorrect: false},
+      {text: 'Parenchymal atrophy', isCorrect: false},
+      {text: 'All of the above', isCorrect: true}
+    ]
+  },
+  {
+    number: 35,
+    type: 'multiple-choice',
+    question: 'Regulatory functions of the kidney are decreased in both',
+    answer: 'Acute and chronic renal failure',
+    score: 0,
+    options: [
+      {text: 'Glomerulus function and acute renal failure', isCorrect: false},
+      {text: 'Acute and chronic renal failure', isCorrect: true},
+      {text: 'Loop of Henle function and chronic renal failure', isCorrect: false},
+      {text: 'None of the above', isCorrect: false}
+    ]
+  },
+  {
+    number: 36,
+    type: 'multiple-choice',
+    question: 'Name 2 etiologic (cause) of chronic renal failure',
+    answer:'parenchymal disease, nephropathies',
+    score: 0,
+    options: [
+      {text: 'nephropathies, sinus lipomatosis', isCorrect: false},
+      {text: 'parenchymal disease, nephropathies', isCorrect: true},
+      {text:'parenchymal disease, sinus lipomatosis', isCorrect: false},
+      {text:'None of the above', isCorrect: false}      
+    ]
+  },
+  {
+    number: 37,
+    type: 'true-false',
+    question: 'In acute renal failure (ARF) there is a reduction in glomerular filtration rate resulting in protoemia',
+    answer: 'False',
+    explanation: 'ARF may occur in prerenal, renal, or postrenal failure stages. The prerenal stage is secondary to hypoperfusion of the kidney. The renal stages may be caused by parenchymal diseases (i.e., acute glomerulonephritis, acute interstitial nephritis, or acute tubular necrosis). They may also be caused by renal vein thrombosis or renal artery occlusion',
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: false},
+      {text: 'False', isCorrect: true}
+    ]
+  },
+  {
+    number: 38,
+    type: 'fill-in',
+    question: 'In intrinsic "intrarenal" failure, ..... is most common',
+    answer:'acute tubular necrosis',
+    score: 0,
+    options: [
+      {text: 'acute tubular necrosis', isCorrect: true}
+    ]
+  },
+  {
+    number: 39,
+    type: 'multiple-choice',
+    question: "What is Ultrasound's role in diagnosing the cause of acute renal failure?",
+    answer:'hydronephrosis, abnormal resistance index',
+    score: 0,
+    options: [
+      {text: 'hydronephrosis, abnormal resistance index', isCorrect: true},     
+      {text: 'acute tubular necrosis, abnormal resistance index', isCorrect: false},     
+      {text: 'hydronephrosis, acute tubular necrosis', isCorrect: false},     
+      {text: 'None of the above', isCorrect: false},     
+    ]
+  },
+  {
+    number: 40,
+    type: 'fill-in',
+    question: 'High levels of Serum ... are the most accurate in diagnosing ARF',
+    answer: 'creatine',
+    score: 0,
+    options: [
+      {text: 'creatine', isCorrect: true}
+    ]
+  },
+  {
+    number: 41,
+    type: 'fill-in',
+    question: 'What RAR',
+    answer: 'renal aortic ratio',
+    score: 0,
+    options: [
+      {text: 'renal aortic ratio', isCorrect: true}
+    ]
+  },
+  {
+    number: 42,
+    type: 'multiple-choice',
+    question: 'RAR ration should be no more than',
+    answer: '<3.5',
+    score: 0,
+    options: [
+      {text: '<3.5', isCorrect: true},
+      {text: '<2.5', isCorrect: false},
+      {text: '<5.5', isCorrect: false},
+      {text: '<6.5', isCorrect: false},
+      {text: 'None of the above', isCorrect: false}
+    ]
+  },
+  {
+    number: 43,
+    type: 'multiple-choice',
+    question: 'When taking the indirect measurement of the stenosis what arteries should be used for cooler Doppler and waveform?',
+    answer: 'Segemental or interlobar',
+    score: 0,
+    options: [
+      {text: 'Segemental or interlobar', isCorrect: true},
+      {text: 'Segemental or interlobular', isCorrect: false},
+      {text: 'Interlobar and arcuate', isCorrect: false},
+      {text: 'Aorta and interlobar', isCorrect: false},
+      {text: 'None of the above', isCorrect: false}
       
-  //   ]
-  // },
-  // {
-  //   number: 35,
-  //   type: 'multiple-choice',
-  //   question: 'Regulatory functions of the kidney are decreased in both',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'Glomerulus function and acute renal failure',
-  //     'Acute and chronic renal failure',
-  //     'Loop of Henle function and chronic renal failure',
-  //     'None of the above'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'fill-in',
-  //   question: 'Name 2 etiologic (cause) of chronic renal failure',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'parenchymal disease',
-  //     'nephropathies'          
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'true-false',
-  //   question: 'In acute renal failure (ARF) there is a reduction in glomerular filtration rate resulting in protoemia',
-  //   answer:[],
-  //   explanation: 'ARF may occur in prerenal, renal, or postrenal failure stages. The prerenal stage is secondary to hypoperfusion of the kidney. The renal stages may be caused by parenchymal diseases (i.e., acute glomerulonephritis, acute interstitial nephritis, or acute tubular necrosis). They may also be caused by renal vein thrombosis or renal artery occlusion',
-  //   score: 0,
-  //   options: [
-  //     'True',
-  //     'False'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'fill-in',
-  //   question: 'In intrinsic "intrarenal" failure, ... is most common',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'acute tubular necrosis'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'multiple-choice',
-  //   question: "What is Ultrasound's role in diagnosing the cause of acute renal failure?",
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'hydronephrosis',
-  //     'abnormal resistance index'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'fill-in',
-  //   question: 'High levels of Serum ... are the most accurate in diagnosing ARF',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'creatine'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'fill-in',
-  //   question: 'What RAR',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'renal aortic ratio'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'multiple-choice',
-  //   question: 'RAR ration should be no more than',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     '<3.5',
-  //     '<2.5',
-  //     '<5.5',
-  //     '<6.5',
-  //     'None of the above'
-  //   ]
-  // },
-  // {
-  //   number: ,
-  //   type: 'multiple-choice',
-  //   question: 'When taking the indirect measurement of the stenosis what arteries should be used for cooler Doppler and weaveform?',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     'Segemental or interlobar',
-  //     'Segemental or interlobular',
-  //     'Interlobar and arcuate',
-  //     'Aorta and interlobar',
-  //     'None of the above'
-  //   ]
-  // },
-  // {
-  //   number: 43,
-  //   type: 'multiple-choice',
-  //   question: 'The resistive index for this measurement should be no more than',
-  //   answer:[],
-  //   score: 0,
-  //   options: [
-  //     '0.5',
-  //     '0.7',
-  //     '0.4',
-  //     '0.6',
-  //     'None of the above'
-  //   ]
-  // }
+    ]
+  },
+  {
+    number: 44,
+    type: 'multiple-choice',
+    question: 'The resistive index for this measurement should be no more than',
+    answer: 0.7,
+    score: 0,
+    options: [
+      {text: '0.5', isCorrect: false},
+      {text: '0.4', isCorrect: false},
+      {text: '0.6', isCorrect: false},
+      {text: '0.7', isCorrect: true},
+      {text: 'None of the above', isCorrect: false}
+    ]
+  },
+  {
+    number: 45,
+    type: 'multiple-choice',
+    question: 'Name the renal pathology that occurs when part of the tissue undergoes necrosis after te cessation of the blood supply',
+    answer: 'None of the above',
+    score: 0,
+    options: [
+      {text: 'Acute renal failure', isCorrect: false},
+      {text: 'Chronic renal failure', isCorrect: false},
+      {text: 'Renal cortex', isCorrect: false},
+      {text: 'None of the above', isCorrect: true}
+    ]
+  },
+  {
+    number: 46,
+    type: 'multiple-choice',
+    question: 'Name the renal pathology that occurs when part of the tissue undergoes necrosis after te cessation of the blood supply',
+    answer: 'Renal infraction',
+    score: 0,
+    options: [
+      {text: 'Acute renal failure', isCorrect: false},
+      {text: 'Chronic renal failure', isCorrect: false},
+      {text: 'Renal cortex', isCorrect: false},
+      {text: 'Renal infraction', isCorrect: true}
+    ]
+  },
+  {
+    number: 47,
+    type: 'multiple-choice',
+    question: 'Where is renal infraction located?',
+    answer: 'Along the periphery of the renal border',
+    score: 0,
+    options: [
+      {text: 'In the renal sinus', isCorrect: false},
+      {text: 'Along the periphery of the renal border', isCorrect: true},
+      {text: 'In the medullary pyramids', isCorrect: false},
+      {text: 'In the loops of henle', isCorrect: false}
+    ]
+  },
+  {
+    number: 48,
+    type: 'multiple-choice',
+    question: 'What is the most common cause of renal vein thrombosis?',
+    answer: 'Trauma',
+    score: 0,
+    options: [
+      {text: 'Chronic Renal Disease', isCorrect: false},
+      {text: 'Renal infarction', isCorrect: false},
+      {text: 'Trauma', isCorrect: true},
+      {text: 'None of the above', isCorrect: false}
+    ]
+  },
+  {
+    number: 49,
+    type: 'true-false',
+    question: "In renal venous disorders, children are more likely affected than adults",
+    answer: 'True',
+    explanation: "Renal vein thrombosis is most likely to occur in the dehydrated or septic infant and is more prevalent in infants of diabetic mothers. It may also occur in infants with shock, glomerulonephritis, or nephrotic syndrome",
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: true},
+      {text: 'False', isCorrect: false}
+    ]
+  },
+  {
+    number: 50,
+    type: 'multiple-choice',
+    question: "Name the pathology that causes a 'twinkle' on color doppler",
+    answer: 'All of the above',
+    score: 0,
+    options: [
+      {text: 'Kidney increases in size', isCorrect: false},
+      {text: 'Echogenic', isCorrect: false},
+      {text: 'Poor echo pyramids', isCorrect: false},
+      {text: 'All of the above', isCorrect: true}
+    ]
+  },
+  {
+    number: 51,
+    type: 'fill-in',
+    question: "Wat is the course of treatment for end stage renal disease",
+    answer: 'Renal transplant',
+    score: 0,
+    options: [
+      {text: 'Renal transplant', isCorrect: true}
+    ]
+  },
+  {
+    number: 52,
+    type: 'fill-in',
+    question: "What is the most common artery does the renal artery anastomose too when doctors perform a renal artery transplant?",
+    answer: 'External illiac artery',
+    score: 0,
+    options: [
+      {text: 'External illiac artery', isCorrect: true}
+    ]
+  },
+  {
+    number: 53,
+    type: 'multiple-choice',
+    question: "Name two reasons why Ultrasound plays an important role in renal artery transplant",
+    answer: 'To identify increased renovascular resistance. Ensuring arterial and venous circulations are normal',
+    score: 0,
+    options: [
+      {text: 'To identify increased renovascular resistance. Ensuring arterial and venous circulations are normal.', isCorrect: true},
+      {text: 'To prevent hydronephrosis. To track resistive index measurements.', isCorrect: false},
+      {text: 'None of the above', isCorrect: false}
+    ]
+  },
+  {
+    number: 54,
+    type: 'multiple-choice',
+    question: "Renal allograft dysfunction most commonly occurs",
+    answer: '1 year after tranplantation',
+    score: 0,
+    options: [
+      {text: '2 years after tranplantation' , isCorrect: false},
+      {text: '3 years after tranplantation' , isCorrect: false},
+      {text: '6 months after tranplantation' , isCorrect: false},
+      {text: '1 year after tranplantation' , isCorrect: true}
+    ]
+  },
+  {
+    number: 55,
+    type: 'multiple-choice',
+    question: "Normal bladder wall thickness is typically",
+    answer: '5 mm',
+    score: 0,
+    options: [
+      {text: '3 mm' , isCorrect: false},
+      {text: '2 mm' , isCorrect: false},
+      {text: '7 mm' , isCorrect: false},
+      {text: '10 mm' , isCorrect: false},
+      {text: '5 mm' , isCorrect: true}
+    ]
+  },
+  {
+    number: 56,
+    type: 'multiple-choice',
+    question: "the urinary bladder is located behind the",
+    answer: 'Pubic bone',
+    score: 0,
+    options: [
+      {text: 'Pubic bone' , isCorrect: true},
+      {text: 'Pelvis bone' , isCorrect: false},
+      {text: 'Psoas muscle' , isCorrect: false},
+      {text: 'Uterus' , isCorrect: false}
+    ]
+  },
+  {
+    number: 57,
+    type: 'multiple-choice',
+    question: "The urinary apex is connected to the umbilicus by the",
+    answer: 'Median umbilical ligament',
+    score: 0,
+    options: [
+      {text: 'Posterior umbilical ligament' , isCorrect: false},
+      {text: 'Median umbilical ligament' , isCorrect: true},
+      {text: 'Ligament venosum' , isCorrect: false},
+      {text: 'None of the above' , isCorrect: false}
+    ]
+  },
+  {
+    number: 58,
+    type: 'multiple-choice',
+    question: "Define bladder diverticula",
+    answer: 'A herniation of the bladder wall. It is an outpouching of bladder mucosa between muscle bundles caused by increased intravesical pressure. These outpouchings may be singular or multiple and are thinner than the normal bladder wall.',
+    score: 0,
+    options: [
+      {text: 'Encompasses a wide range of disease processes, which may be typical, complicated, or atypical. The disease may be acquired (nongenetic) or inherited (genetic) (e.g., von Hippel–Lindau disease, tuberous sclerosis' , isCorrect: false},
+      {text: 'A herniation of the bladder wall. It is an outpouching of bladder mucosa between muscle bundles caused by increased intravesical pressure. These outpouchings may be singular or multiple and are thinner than the normal bladder wall.' , isCorrect: true},
+      {text: 'Complications from partial nephrectomies, or trauma.' , isCorrect: false},
+      {text: 'None of the above' , isCorrect: false}
+    ]
+  },
+  {
+    number: 59,
+    type: 'true-false',
+    question: "Urachal cyst is a dialtion of the fetal urachus",
+    answer: 'True',
+    explanation: "The urinary bladder is continuous with the allantois during embryonic development. The allantois regresses to become a fibrous cord known as the urachus. The urachus extends from the apex of the bladder to the umbilicus. If the lumen of the allantois persists while the urachus forms, an urachal fistula will develop resulting in urine draining from the bladder into the umbilicus. If only a small part of the lumen of the allantois persists, it is called a urachal cyst or vesicoallantoic cyst. If a larger portion of the lumen persists, it may cause a urachal sinus to develop",
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: true},
+      {text: 'False', isCorrect: false}
+    ]
+  },
+  {
+    number: 60,
+    type: 'multiple-choice',
+    question: "In the developing fetus, the canal between the belly button and the bladder is known as the",
+    answer: 'Urachus',
+    score: 0,
+    options: [
+      {text: 'Ureters' , isCorrect: false},
+      {text: 'Urachus' , isCorrect: true},
+      {text: 'Umbilical canalfalse', isCorrect: false},
+      {text: 'Laposcopic junction', isCorrect: false},
+      {text: 'None of the above' , isCorrect: false}
+    ]
+  },
+  {
+    number: 61,
+    type: 'fill-in',
+    question: "Another name for Cystitis...",
+    answer: 'Bladder inflammation',
+    score: 0,
+    options: [
+      {text: 'Bladder inflammation', isCorrect: true}
+    ]
+  },
+  {
+    number: 62,
+    type: 'multiple-choice',
+    question: "What are some symptoms of bladder tumors",
+    answer: 'Bladder mass 3to 4 mm and thick walls',
+    score: 0,
+    options: [
+      {text: 'Thin walls, hypoechoic mass' , isCorrect: false},
+      {text: 'Bladder mass 3 to 4 mm and thick walls', isCorrect: true},
+      {text: 'Bladder mass 5 mm and thin walls', isCorrect: false},
+      {text: 'None of the above' , isCorrect: false}
+    ]
+  },
+  {
+    number: 63,
+    type: 'true-false',
+    question: "All primary bladder tumors has smooth hypoechoic mass that projects into the lumen of the bladder",
+    answer: 'False',
+    explanation: "Benign tumors are typically hypoechoic compared with malignant bladder tumors, but they may have the same echogenicity. All primary bladder tumors—squamous cell carcinoma, adenocarcinoma, and rhabdomyosarcoma in children—have the same sonographic appearance: an irregular echogenic mass that projects into the lumen of the bladder",
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: false},
+      {text: 'False', isCorrect: true}
+    ]
+  },
+  {
+    number: 64,
+    type: 'multiple-choice',
+    question: "What is the most common bladder neoplasm",
+    answer: 'TCC: Transitional Cell Carcinoma',
+    score: 0,
+    options: [
+      {text: 'TCC: Transitional Cell Carcinoma' , isCorrect: true},
+      {text: 'RCC: Renal Cell Carcinoma' , isCorrect: false},
+      {text: 'Kidney stone' , isCorrect: false},
+      {text: 'Mets' , isCorrect: false}
+    ]
+  },
+  {
+    number: 65,
+    type: 'true-false',
+    question: "Can hydronephrosis be associate with TCC: Transitional Cell Carcinoma",
+    answer: 'Yes',
+    explanation: "Not Found.",
+    score: 0,
+    options: [
+      {text: 'Yes', isCorrect: true},
+      {text: 'No', isCorrect: false}
+    ]
+  },
+  {
+    number: 66,
+    type: 'multiple-choice',
+    question: "What is the most common clical representation of TCC: Transitional Cell Carcinoma",
+    answer: 'Hematuria',
+    score: 0,
+    options: [
+      {text: 'Hydronephrosis' , isCorrect: false},
+      {text: 'Hematuria' , isCorrect: true},
+      {text: 'Thin bladder walls' , isCorrect: false},
+      {text: 'Increased BUN level' , isCorrect: false}
+    ]
+  },
+  {
+    number: 67,
+    type: 'true-false',
+    question: "Are ureteroceles an acquired pathology?",
+    answer: 'No',
+    explanation: " A ureterocele is a cystlike enlargement of the lower end of the ureter caused by congenital or acquired stenosis of the distal end of the ureter.",
+    score: 0,
+    options: [
+      {text: 'Yes', isCorrect: false},
+      {text: 'No', isCorrect: true}
+    ]
+  },
+  {
+    number: 68,
+    type: 'true-false',
+    question: "Ureteroceles a cystlike enlargement of the upper end of the ureter which projects into the bladder lumen and the upj",
+    answer: 'False',
+    explanation: " A ureterocele is a cystlike enlargement of the lower end of the ureter caused by congenital or acquired stenosis of the distal end of the ureter.",
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: false},
+      {text: 'False', isCorrect: true}
+    ]
+  },
+  {
+    number: 69,
+    type: 'true-false',
+    question: "Serum creatinine is directly related to glomerular filtration rate (GFR)",
+    answer: 'False',
+    explanation: "Not Found.",
+    score: 0,
+    options: [
+      {text: 'True', isCorrect: false},
+      {text: 'False', isCorrect: true}
+    ]
+  },
 ]
 
 // Export for use in other file
