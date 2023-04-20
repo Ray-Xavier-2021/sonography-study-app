@@ -338,10 +338,10 @@ const questions  = [
     number: 28,
     type:'fill-in',
     question: 'Describe pathology for Urolithiasis?',
-    answer: 'stones in ureter',
+    answer: 'Stones in the ureter',
     score: 0,
     options: [
-      {text: 'Stone ureter', isCorrect: true},
+      {text: 'Stones in the ureter', isCorrect: true},
       {text: 'Stone within the urinary system', isCorrect: true}      
     ]
   },
